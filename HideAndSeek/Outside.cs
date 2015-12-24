@@ -9,7 +9,7 @@ namespace HideAndSeek
 	class Outside : Location
 	{
 		private bool hot;
-		public Outside(bool hot, string name)
+		public Outside(string name, bool hot)
 			:base (name) {
 			this.hot = hot;
 		}
@@ -20,7 +20,10 @@ namespace HideAndSeek
 
 		public override string Description {
 			get {
-				return base.Description;
+				string NewDescription = base.Description;
+				if (hot)
+					NewDescription += " It's very hot.";
+				return NewDescription;
 			}
 		}
 	}

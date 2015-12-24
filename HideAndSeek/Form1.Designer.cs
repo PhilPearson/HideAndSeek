@@ -47,6 +47,7 @@
 			this.goHere.TabIndex = 1;
 			this.goHere.Text = "Go here:";
 			this.goHere.UseVisualStyleBackColor = true;
+			this.goHere.Click += new System.EventHandler(this.goHere_Click);
 			// 
 			// exits
 			// 
@@ -59,13 +60,14 @@
 			// 
 			// goThroughTheDoor
 			// 
-			this.goThroughTheDoor.Enabled = false;
 			this.goThroughTheDoor.Location = new System.Drawing.Point(13, 235);
 			this.goThroughTheDoor.Name = "goThroughTheDoor";
 			this.goThroughTheDoor.Size = new System.Drawing.Size(437, 23);
 			this.goThroughTheDoor.TabIndex = 3;
 			this.goThroughTheDoor.Text = "Go through the door";
 			this.goThroughTheDoor.UseVisualStyleBackColor = true;
+			this.goThroughTheDoor.Visible = false;
+			this.goThroughTheDoor.Click += new System.EventHandler(this.goThroughTheDoor_Click);
 			// 
 			// Form1
 			// 
