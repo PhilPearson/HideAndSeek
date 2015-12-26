@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace HideAndSeek
 {
-	class RoomWithDoor : Room, IHasExteriorDoor
+	class RoomWithDoor : RoomWithHidingPlace, IHasExteriorDoor
 	{
 		private string doorDescription;
 		public string DoorDescription {
 			get { return doorDescription; }
 		}
 
-		public RoomWithDoor(string name, string decoration, string doorDescription)
-			: base(name, decoration) {
+		public RoomWithDoor(string name, string decoration, string doorDescription, string hidingPlace)
+			: base(name, decoration, hidingPlace) {
 			this.doorDescription = doorDescription;
 		}
 
